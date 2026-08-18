@@ -1,0 +1,26 @@
+[project]
+name = "zoned-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "eddoyang", email = "eddoyang@students.cs.ubc.ca" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "docling>=2.120.2",
+    "lancedb>=0.37.1",
+]
+
+[project.scripts]
+zoned-chatbot = "zoned_chatbot:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.3",
+]
