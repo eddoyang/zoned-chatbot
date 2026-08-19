@@ -1,0 +1,19 @@
+services:
+  db:
+      image: pgvector/pgvector:pg16
+      container_name: zoned_db
+      environment:
+        POSTGRES_USER: zoned
+        POSTGRES_PASSWORD: zoned
+        POSTGRES_DB: zoned
+      ports:
+        - "5433:5432"    #host:container
+      volumes:
+        - pgdata:/var/lib/postgresql/data
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U zoned"]
+        interval: 5s
+        retries: 10
+  
+volumes:
+  pgdata:
