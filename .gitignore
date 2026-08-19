@@ -17,3 +17,10 @@ data/
 
 # macOS
 .DS_Store
+
+
+# Corpus
+corpus/
+
+# Other
+docs/

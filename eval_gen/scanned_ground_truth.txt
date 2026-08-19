@@ -1,0 +1,156 @@
+# OCR ground truth for corpus_gen/deferred/09_scanned_calibration_certificates.pdf
+# Text as it existed before rasterisation. Score OCR output against this in Phase 7.
+
+----- page 1 -----
+Calibration Certificates 2025-Q3
+Aldergrove Instruments Ltd.
+Metrology Laboratory
+Page 1
+Calibration Certificates — Batch 2025-Q3
+Aldergrove Instruments Ltd. Metrology Laboratory, Richmond, British Columbia. Certificates signed
+and scanned for the customer file.
+Certificate CAL-2025-3001
+Instrument serial: AX7300-BC-0716
+Calibration date: 2025-07-21
+Reference standard: NRC-traceable hydrophone HR-704
+Ambient temperature: 23.8 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-09
+Deviation at 200 kHz: 1.2 per cent. Deviation at 400 kHz: 0.0 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: R. Fairweather, Metrology Technician
+Certificate CAL-2025-3002
+Instrument serial: AX7200-BC-0341
+Calibration date: 2025-08-12
+Reference standard: NRC-traceable hydrophone HR-100
+Ambient temperature: 21.5 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-03
+Deviation at 200 kHz: 1.6 per cent. Deviation at 400 kHz: 0.0 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: R. Fairweather, Metrology Technician
+Certificate CAL-2025-3003
+Instrument serial: AX7200-BC-0108
+Calibration date: 2025-09-22
+Reference standard: NRC-traceable hydrophone HR-933
+Ambient temperature: 19.9 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-08
+
+----- page 2 -----
+Calibration Certificates 2025-Q3
+Aldergrove Instruments Ltd.
+Metrology Laboratory
+Page 2
+Deviation at 200 kHz: 0.8 per cent. Deviation at 400 kHz: 1.0 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: K. Nakamura, Metrology Technician
+Certificate CAL-2025-3004
+Instrument serial: AX7200-BC-0273
+Calibration date: 2025-09-14
+Reference standard: NRC-traceable hydrophone HR-167
+Ambient temperature: 22.7 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-04
+Deviation at 200 kHz: 1.9 per cent. Deviation at 400 kHz: 0.6 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: M. Castellanos, Metrology Technician
+Certificate CAL-2025-3005
+Instrument serial: AX7200-BC-0167
+Calibration date: 2025-09-17
+Reference standard: NRC-traceable hydrophone HR-199
+Ambient temperature: 21.6 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-06
+Deviation at 200 kHz: 0.9 per cent. Deviation at 400 kHz: 0.2 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: R. Fairweather, Metrology Technician
+Certificate CAL-2025-3006
+Instrument serial: AX7300-BC-0237
+Calibration date: 2025-09-28
+Reference standard: NRC-traceable hydrophone HR-677
+Ambient temperature: 23.4 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-05
+
+----- page 3 -----
+Calibration Certificates 2025-Q3
+Aldergrove Instruments Ltd.
+Metrology Laboratory
+Page 3
+Deviation at 200 kHz: 1.8 per cent. Deviation at 400 kHz: 1.6 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: A. Whitcombe, Metrology Technician
+Certificate CAL-2025-3007
+Instrument serial: AX7300-BC-0006
+Calibration date: 2025-09-15
+Reference standard: NRC-traceable hydrophone HR-650
+Ambient temperature: 21.5 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-03
+Deviation at 200 kHz: 0.3 per cent. Deviation at 400 kHz: 0.5 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: R. Fairweather, Metrology Technician
+Certificate CAL-2025-3008
+Instrument serial: AX7200-BC-0314
+Calibration date: 2025-09-16
+Reference standard: NRC-traceable hydrophone HR-768
+Ambient temperature: 19.0 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-08
+Deviation at 200 kHz: 1.2 per cent. Deviation at 400 kHz: 1.4 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: A. Whitcombe, Metrology Technician
+Certificate CAL-2025-3009
+Instrument serial: AX7300-BC-0215
+Calibration date: 2025-07-28
+Reference standard: NRC-traceable hydrophone HR-375
+Ambient temperature: 19.3 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-03
+
+----- page 4 -----
+Calibration Certificates 2025-Q3
+Aldergrove Instruments Ltd.
+Metrology Laboratory
+Page 4
+Deviation at 200 kHz: 1.5 per cent. Deviation at 400 kHz: 0.7 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: A. Whitcombe, Metrology Technician
+Certificate CAL-2025-3010
+Instrument serial: AX7300-BC-0177
+Calibration date: 2025-07-16
+Reference standard: NRC-traceable hydrophone HR-437
+Ambient temperature: 22.0 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-03
+Deviation at 200 kHz: 0.4 per cent. Deviation at 400 kHz: 1.2 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: A. Whitcombe, Metrology Technician
+Certificate CAL-2025-3011
+Instrument serial: AX7300-BC-0720
+Calibration date: 2025-08-17
+Reference standard: NRC-traceable hydrophone HR-246
+Ambient temperature: 19.5 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-08
+Deviation at 200 kHz: 0.0 per cent. Deviation at 400 kHz: 0.7 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: K. Nakamura, Metrology Technician
+Certificate CAL-2025-3012
+Instrument serial: AX7200-BC-0989
+Calibration date: 2025-07-16
+Reference standard: NRC-traceable hydrophone HR-631
+Ambient temperature: 23.0 °C
+Result: Within tolerance across the full frequency band.
+Next calibration due: 2026-06
+
+----- page 5 -----
+Calibration Certificates 2025-Q3
+Aldergrove Instruments Ltd.
+Metrology Laboratory
+Page 5
+Deviation at 200 kHz: 0.7 per cent. Deviation at 400 kHz: 1.8 per cent. Both within the ±2.0 per cent acceptance
+limit.
+Signed: A. Whitcombe, Metrology Technician
+

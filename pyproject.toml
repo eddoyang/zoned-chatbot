@@ -10,6 +10,8 @@ requires-python = ">=3.13"
 dependencies = [
     "docling>=2.120.2",
     "lancedb>=0.37.1",
+    "openai>=3.3.0",
+    "python-dotenv>=1.2.3",
 ]
 
 [project.scripts]
