@@ -24,3 +24,6 @@ corpus/
 
 # Other
 docs/
+
+# Archives
+*.zip
