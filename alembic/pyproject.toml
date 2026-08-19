@@ -1,5 +1,5 @@
 [project]
-name = "zoned-chatbot"
+name = "alembic"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,22 +7,11 @@ authors = [
     { name = "eddoyang", email = "eddoyang@students.cs.ubc.ca" }
 ]
 requires-python = ">=3.13"
-dependencies = [
-    "anthropic>=0.124.0",
-    "docling>=2.120.2",
-    "openai>=3.3.0",
-    "python-dotenv>=1.2.3",
-]
+dependencies = []
 
 [project.scripts]
-zoned-chatbot = "zoned_chatbot:main"
+alembic = "alembic:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
-
-[dependency-groups]
-dev = [
-    "pytest>=9.1.1",
-    "ruff>=0.16.3",
-]
