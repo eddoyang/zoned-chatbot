@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "anthropic>=0.124.0",
     "docling>=2.120.2",
     "lancedb>=0.37.1",
     "openai>=3.3.0",
