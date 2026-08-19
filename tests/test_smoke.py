@@ -3,14 +3,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 def test_corpus_exists():
-    pdfs = list(Path("corpus").glob("*.pdf"))
+    pdfs = list((ROOT /"corpus").glob("*.pdf"))
     assert len(pdfs) >= 6, f"expected 6+ PDFs, found {len(pdfs)}"
 
 
 
 def test_golden_set_is_valid_jsonl():
     import json
-    path = Path("eval/golden_set.jsonl")
+    path = ROOT / ("eval/golden_set.jsonl")
     
     if path.stat().st_size == 0:
         return                      # set not written
