@@ -47,8 +47,9 @@ Phase 1 baseline — 2026-08-20, git <145eecd>
 - corpus: rag_lewis.pdf only
 - factual (3):   2/3 correct
 - refusal (10):  10/10 correctly refused
-- notes: 
 
+
+### Notes: 
 The correct factual questions had at 2-3 of the correct answers in the top 5.
 All euclidean distances were relatively high, with every answer greater than 0.40.
 
