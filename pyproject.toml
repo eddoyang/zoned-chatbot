@@ -8,10 +8,14 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "alembic>=1.19.1",
     "anthropic>=0.124.0",
     "docling>=2.120.2",
     "openai>=3.3.0",
+    "pgvector>=0.5.0",
+    "psycopg[binary]>=3.3.4",
     "python-dotenv>=1.2.3",
+    "tiktoken>=0.14.0",
 ]
 
 [project.scripts]
