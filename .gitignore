@@ -27,3 +27,6 @@ docs/
 
 # Archives
 *.zip
+
+# Scratch
+scratch_*.py
