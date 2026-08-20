@@ -3,13 +3,13 @@ import sys
 from pathlib import Path
 
 import psycopg
+from pgvector import Vector
 from pgvector.psycopg import register_vector
 
 from .chunk import chunk
 from .config import CORPUS_ROOT, DATABASE_URL
 from .embed import embed_texts
 from .parse import parse
-
 
 
 def ingest(path: Path) -> None:
@@ -42,7 +42,7 @@ def ingest(path: Path) -> None:
                 VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """,
                 [
-                    (doc_id, c.index, c.content, c.page, c.char_start, c.char_end, v)
+                    (doc_id, c.index, c.content, c.page, c.char_start, c.char_end, Vector(v))
                     for c, v in zip(chunks, vectors)
                 ],
             )
