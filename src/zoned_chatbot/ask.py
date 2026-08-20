@@ -4,6 +4,8 @@ from anthropic import Anthropic
 
 from .retrieve import retrieve
 
+from .config import TOP_K
+
 client = Anthropic()
 
 SYSTEM = (
@@ -12,8 +14,9 @@ SYSTEM = (
     "If the excerpts do not contain the answer, say so plainly."
 )
 
-def ask(question: str) -> str:
-    hits = retrieve(question, k=5)
+def ask(question: str, hits: list[dict] | None = None) -> str:
+    if hits is None:
+        hits = retrieve(question, k=TOP_K)
 
     context = "\n\n---\n\n".join(
         f"[{h['title']}, p.{h['page']}]\n{h['content']}" for h in hits
