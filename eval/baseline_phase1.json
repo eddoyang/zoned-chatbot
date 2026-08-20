@@ -1,0 +1,223 @@
+[
+  {
+    "id": "real-F09",
+    "type": "factual",
+    "question": "What generator model does the RAG paper use, and how many parameters does it have?",
+    "expected": "BART-large, a pre-trained seq2seq transformer with 400M parameters.",
+    "answer": "Based on the provided excerpts:\n\n**Generator Model:** BART-large\n\n**Number of Parameters:** 400M parameters\n\n**Source Citations:**\n- [rag_lewis, p.3]: \"We use BART-large [32], a pre-trained seq2seq transformer [58] with 400M parameters.\"\n- [rag_lewis, p.18]: The document also mentions \"406M trainable parameters from BART-large\" when discussing the total parameter count of RAG models.\n\nNote: There is a slight discrepancy in the document between stating 400M parameters (page 3) and 406M parameters (page 18), but the core answer is that RAG uses BART-large as its generator component with approximately 400M parameters.",
+    "retrieved_pages": [
+      2,
+      18,
+      6,
+      18,
+      3
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-F10",
+    "type": "factual",
+    "question": "Which Wikipedia dump does the RAG paper use, and how many documents does it produce?",
+    "expected": "The December 2018 dump, split into disjoint 100-word chunks for a total of 21M documents.",
+    "answer": "According to the RAG paper:\n\n**Wikipedia dump:** December 2018 dump (rag_lewis, p.4)\n\n**Number of documents:** 21M (million) documents (rag_lewis, p.4)\n\nThe paper states: \"Following Lee et al. [31] and Karpukhin et al. [26], we use the December 2018 dump. Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents.\"",
+    "retrieved_pages": [
+      9,
+      4,
+      18,
+      16,
+      4
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-F11",
+    "type": "factual",
+    "question": "What hardware did the RAG authors train on, and how much CPU memory does the Wikipedia index require?",
+    "expected": "8 x 32GB NVIDIA V100 GPUs; approximately 100 GB of CPU memory, reduced to 36GB using FAISS compression.",
+    "answer": "Based on the provided documents:\n\n**Hardware for training:**\nAccording to **rag_lewis, p.16**, \"We train with mixed precision floating point arithmetic, distributing training across 8, 32GB NVIDIA V100 GPUs, though training and inference can be run on one GPU.\"\n\n**CPU memory for Wikipedia index:**\nThe document states two different requirements:\n\n1. Initially: \"We find that doing Maximum Inner Product Search with FAISS is sufficiently fast on CPU, so we store document index vectors on CPU, requiring **~100GB of CPU memory** for all of Wikipedia.\" (**rag_lewis, p.16**)\n\n2. After submission: \"We also compress the document index using FAISS's compression tools, reducing the CPU memory requirement to **36GB**.\" (**rag_lewis, p.16**)",
+    "retrieved_pages": [
+      9,
+      4,
+      18,
+      18,
+      16
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R01",
+    "type": "refusal",
+    "question": "What is NVIDIA's revenue guidance for fiscal year 2027?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about NVIDIA's revenue guidance for fiscal year 2027. \n\nThe excerpts are from a research paper titled \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (rag_lewis) which discusses natural language processing models and does not contain any information about NVIDIA or its financial guidance.",
+    "retrieved_pages": [
+      11,
+      15,
+      18,
+      1,
+      2
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R02",
+    "type": "refusal",
+    "question": "What was Jen-Hsun Huang's total compensation in fiscal year 2026?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about Jen-Hsun Huang's total compensation in fiscal year 2026. These excerpts are from a paper titled \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (rag_lewis) and contain only references and implementation details related to natural language processing research.",
+    "retrieved_pages": [
+      15,
+      11,
+      15,
+      12,
+      10
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R03",
+    "type": "refusal",
+    "question": "What percentage of NVIDIA's fiscal 2026 employees were based in the United States?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about NVIDIA's fiscal 2026 employees or their geographic distribution. The excerpts are from a paper titled \"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\" (rag_lewis) and discuss topics related to natural language processing models, datasets, and technical implementation details. They do not contain any information about NVIDIA's employee demographics.",
+    "retrieved_pages": [
+      18,
+      18,
+      11,
+      15,
+      15
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R04",
+    "type": "refusal",
+    "question": "What is projected United States data center electricity consumption in 2030, in TWh?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain any information about projected United States data center electricity consumption in 2030. The excerpts are from a paper about RAG (Retrieval-Augmented Generation) models and discuss topics such as model parameters, datasets for question answering tasks, and implementation details for NLP systems.",
+    "retrieved_pages": [
+      18,
+      18,
+      13,
+      15,
+      14
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R05",
+    "type": "refusal",
+    "question": "How many mentions of AI were there in legislative proceedings in 2025?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about mentions of AI in legislative proceedings in 2025. \n\nThe excerpts are from a research paper on Retrieval-Augmented Generation (RAG) and consist primarily of bibliographic references and implementation details. The references span from approximately 2015-2020, with no content related to legislative proceedings or the year 2025.",
+    "retrieved_pages": [
+      11,
+      15,
+      15,
+      13,
+      12
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R06",
+    "type": "refusal",
+    "question": "What was the estimated dollar training cost of a frontier model released in 2025?",
+    "expected": null,
+    "answer": "I cannot answer this question based on the provided document excerpts. The excerpts are from a paper about RAG (Retrieval-Augmented Generation) models and discuss technical details about model parameters, training datasets, and performance metrics, but do not contain any information about dollar training costs for frontier models released in 2025.",
+    "retrieved_pages": [
+      18,
+      18,
+      14,
+      12,
+      7
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R07",
+    "type": "refusal",
+    "question": "How many tokens per query does OctoTools consume with the Gemini-2.5-Pro backbone?",
+    "expected": null,
+    "answer": "I cannot answer this question based on the provided document excerpts. The excerpts are from a paper about RAG (Retrieval-Augmented Generation) models by Lewis et al., and do not contain any information about OctoTools or Gemini-2.5-Pro. The documents discuss RAG's architecture, training, and performance on various NLP tasks, but make no mention of the systems referenced in your question.",
+    "retrieved_pages": [
+      18,
+      8,
+      3,
+      18,
+      2
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R08",
+    "type": "refusal",
+    "question": "What learning rate and batch size did the RAG authors use for fine-tuning?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about the specific learning rate and batch size used for fine-tuning RAG models. \n\nWhile the excerpts discuss various training details such as:\n- Using mixed precision floating point arithmetic [rag_lewis, p.16]\n- Distributing training across 8, 32GB NVIDIA V100 GPUs [rag_lewis, p.16]\n- Using Fairseq for training [rag_lewis, p.16]\n- Number of retrieved documents (k \u2208 {5, 10} for training) [rag_lewis, p.4]\n\nThe specific hyperparameters for learning rate and batch size are not mentioned in these excerpts.",
+    "retrieved_pages": [
+      18,
+      4,
+      16,
+      9,
+      18
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R09",
+    "type": "refusal",
+    "question": "How much accuracy does OctoTools lose when the context verifier is removed?",
+    "expected": null,
+    "answer": "I cannot answer this question based on the provided document excerpts. The excerpts are from a paper about RAG (Retrieval-Augmented Generation) models by Lewis et al., and do not contain any information about \"OctoTools\" or a \"context verifier\" component.",
+    "retrieved_pages": [
+      14,
+      18,
+      18,
+      16,
+      7
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  },
+  {
+    "id": "real-R10",
+    "type": "refusal",
+    "question": "What was NVIDIA's Data Center revenue in the fourth quarter of fiscal year 2026?",
+    "expected": null,
+    "answer": "The provided document excerpts do not contain information about NVIDIA's Data Center revenue in the fourth quarter of fiscal year 2026. The excerpts are from a research paper about RAG (Retrieval-Augmented Generation) models by Lewis et al., which discusses natural language processing tasks and model architectures, but does not include any financial information about NVIDIA.",
+    "retrieved_pages": [
+      11,
+      18,
+      15,
+      15,
+      8
+    ],
+    "retrieved_docs": [
+      "rag_lewis.pdf"
+    ]
+  }
+]

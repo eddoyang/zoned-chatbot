@@ -1,11 +1,10 @@
 import psycopg
-from psycopg.rows import dict_row
 from pgvector import Vector
 from pgvector.psycopg import register_vector
+from psycopg.rows import dict_row
 
 from .config import DATABASE_URL
 from .embed import embed_query
-
 
 SQL = """
 SELECT c.id, c.content, c.page, d.title, d.filename,
