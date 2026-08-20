@@ -8,6 +8,29 @@ Zoned treats it as a feature.
 Refusal accuracy is measured in the eval suite alongside answer quality.
 
 
+## Tech stack
+
+**Core** — Python 3.13 · PostgreSQL 16 + pgvector · Docker Compose
+
+**Retrieval** — raw SQL via psycopg 3 (no ORM), HNSW index with cosine
+distance, `tsvector`/GIN full-text column for hybrid search
+
+**Ingestion** — Docling (PDF → text with page provenance) · tiktoken ·
+OpenAI `text-embedding-3-small` (1536d)
+
+**Generation** — Anthropic Messages API (Claude)
+
+**Schema** — Alembic migrations, raw DDL, reversible
+
+**Tooling** — uv · ruff · pytest
+
+
+
+
+
+
+
+
 
 ## CORPORA
 I have 2 folders for both my corpora and evals. The ones ending with "_gen" are fictional, AI generated documents that are used solely for testing. The other corpus/eval contain real documents, which are also used for testing, but provide more realistic documents to use. I have both of these to help with testing and debugging the model.
