@@ -9,8 +9,8 @@ Refusal accuracy is measured in the eval suite alongside answer quality.
 
 
 
-## CORPUSES
-I have 2 folders for both my corpuses and evals. The ones ending with "_gen" are fictional, AI generated documents that are used solely for testing. The other corpuses/evals are real documents, which are also used for testing, but provide more realistic documents to use. I have both of these to help with testing and debugging the model.
+## CORPORA
+I have 2 folders for both my corpora and evals. The ones ending with "_gen" are fictional, AI generated documents that are used solely for testing. The other corpus/eval contain real documents, which are also used for testing, but provide more realistic documents to use. I have both of these to help with testing and debugging the model.
 
 Current corpus release: corpus-v1
 
@@ -20,11 +20,11 @@ Current corpus release: corpus-v1
 
 # Phase 1
 Phase 1 baseline — 2026-08-20, git <145eecd>
-config: text-embedding-3-small/1536, 800-token chunks, 100 overlap, dense top-5, no rerank
-corpus: rag_lewis.pdf only
-factual (3):   2/3 correct
-refusal (10):  10/10 correctly refused
-notes: 
+- config: text-embedding-3-small/1536, 800-token chunks, 100 overlap, dense top-5, no rerank
+- corpus: rag_lewis.pdf only
+- factual (3):   2/3 correct
+- refusal (10):  10/10 correctly refused
+- notes: 
 
 The correct factual questions had at 2-3 of the correct answers in the top 5.
 All euclidean distances were relatively high, with every answer greater than 0.40.
