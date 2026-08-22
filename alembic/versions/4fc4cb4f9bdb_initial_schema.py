@@ -1,16 +1,17 @@
 """initial schema
 
 Revision ID: 4fc4cb4f9bdb
-Revises: 
+Revises:
 Create Date: 2026-08-20 00:34:23.011751
 
 """
+
 from collections.abc import Sequence
 
 from alembic import op
 
 # revision identifiers, used by Alembic.
-revision: str = '4fc4cb4f9bdb'
+revision: str = "4fc4cb4f9bdb"
 down_revision: str | Sequence[str] | None = None
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
@@ -29,7 +30,6 @@ def upgrade() -> None:
             ingested_at   TIMESTAMPTZ NOT NULL DEFAULT now()
         );
     """)
-
 
     op.execute("""
         CREATE TABLE chunks (

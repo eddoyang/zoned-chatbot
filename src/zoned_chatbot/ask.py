@@ -2,9 +2,8 @@ import sys
 
 from anthropic import Anthropic
 
-from .retrieve import retrieve
-
 from .config import TOP_K
+from .retrieve import retrieve
 
 client = Anthropic()
 
@@ -13,6 +12,7 @@ SYSTEM = (
     "Cite the document title and page for each claim. "
     "If the excerpts do not contain the answer, say so plainly."
 )
+
 
 def ask(question: str, hits: list[dict] | None = None) -> str:
     if hits is None:
@@ -26,10 +26,12 @@ def ask(question: str, hits: list[dict] | None = None) -> str:
         model="claude-sonnet-4-5",
         max_tokens=1024,
         system=SYSTEM,
-        messages=[{
-            "role": "user",
-            "content": f"<excerpts>\n{context}\n</excerpts>\n\nQuestion: {question}",
-        }],
+        messages=[
+            {
+                "role": "user",
+                "content": f"<excerpts>\n{context}\n</excerpts>\n\nQuestion: {question}",
+            }
+        ],
     )
 
     return msg.content[0].text

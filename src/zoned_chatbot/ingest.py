@@ -22,7 +22,7 @@ def ingest(path: Path) -> None:
 
     with psycopg.connect(DATABASE_URL) as conn:
         register_vector(conn)
-        
+
         with conn.cursor() as cur:
             cur.execute(
                 """
@@ -32,7 +32,7 @@ def ingest(path: Path) -> None:
                 """,
                 (path.stem, rel, content_hash, parsed.page_count),
             )
-        
+
             doc_id = cur.fetchone()[0]
 
             cur.executemany(
@@ -42,12 +42,21 @@ def ingest(path: Path) -> None:
                 VALUES (%s, %s, %s, %s, %s, %s, %s)
                 """,
                 [
-                    (doc_id, c.index, c.content, c.page, c.char_start, c.char_end, Vector(v))
+                    (
+                        doc_id,
+                        c.index,
+                        c.content,
+                        c.page,
+                        c.char_start,
+                        c.char_end,
+                        Vector(v),
+                    )
                     for c, v in zip(chunks, vectors)
                 ],
             )
 
     print(f"ingested {rel}: {len(chunks)} chunks, {parsed.page_count} pages")
+
 
 if __name__ == "__main__":
     ingest(Path(sys.argv[1]).resolve())

@@ -16,6 +16,7 @@ class Chunk:
     char_end: int
     page: int | None
 
+
 def chunk(parsed: ParsedDoc) -> list[Chunk]:
     tokens = _enc.encode(parsed.text)
     step = CHUNK_TOKENS - CHUNK_OVERLAP
