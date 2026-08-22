@@ -51,7 +51,7 @@ Phase 1 baseline — 2026-08-20, git <145eecd>
 
 ### Notes: 
 The correct factual questions had at 2-3 of the correct answers in the top 5.
-All euclidean distances were relatively high, with every answer greater than 0.40.
+All cosine distances were relatively high, with every answer greater than 0.40.
 
 Every refusal answer started with a variation of "I cannot answer" or "The excerpt does not contain...", and then a short explanation of what the excerpt actually contains. It gives us page numbers, however generally being randomly chosen within the document. Expected to drop once given full corpus. 
 
