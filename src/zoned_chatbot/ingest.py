@@ -20,6 +20,9 @@ def ingest(path: Path) -> None:
     chunks = chunk(parsed)
     vectors = embed_texts([c.content for c in chunks])
 
+    assert len(chunks) == len(vectors), f"chunk/vector count mismatch: {len(chunks)} chunks, {len(vectors)} vectors"
+
+    
     with psycopg.connect(DATABASE_URL) as conn:
         register_vector(conn)
 
