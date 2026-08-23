@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.scripts]
-zoned-chatbot = "zoned_chatbot:main"
+zoned-chatbot = "zoned_chatbot.ask:main"
 
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
