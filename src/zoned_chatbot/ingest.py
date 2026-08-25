@@ -1,5 +1,6 @@
 import hashlib
 import sys
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -180,6 +181,16 @@ def ingest_dir(root: Path, replace: bool = False, force: bool = False) -> list[R
             print(f"{results[-1].status:9} {results[-1].rel} {results[-1].detail}")
         
     return results
+
+
+def summarize(results: list[Result]) -> None:
+    counts = Counter(r.status for r in results)
+
+    if counts["failed"]:
+        sys.exit(1)
+
+    print("  ·  ".join(f"{status} {n}" for status, n in sorted(counts.items())))
+
 
 
 if __name__ == "__main__":
