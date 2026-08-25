@@ -185,11 +185,11 @@ def ingest_dir(root: Path, replace: bool = False, force: bool = False) -> list[R
 
 def summarize(results: list[Result]) -> None:
     counts = Counter(r.status for r in results)
+    print("  ·  ".join(f"{status} {n}" for status, n in sorted(counts.items())))
 
     if counts["failed"]:
         sys.exit(1)
 
-    print("  ·  ".join(f"{status} {n}" for status, n in sorted(counts.items())))
 
 
 
