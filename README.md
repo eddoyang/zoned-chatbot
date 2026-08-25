@@ -4,9 +4,9 @@ A Retrieval-augmented generation (RAG) that answers questions grounded solely in
 
 --- 
 ## Vision
-The primary goal is reducing hallucination: a system that answers only from the documents it's given, and says "not in the documents" instead of outputting something plausible when the answer isn't even there. Handing an LLM a question and letting it answer from memory allows it to confidently make things up; LLM's are trained to be helpful, and "I don't know" fights that instinct. The goal here is to close that gap: upload documents, ask questions, get answers grounded solely in those documents, with a real and reliable refusal. 
+The primary goal of Zoned is reducing hallucination: A system that answers only from the documents it's given, and says "not in the documents" instead of outputting something plausible when the answer isn't even there. Handing an LLM a question and letting it answer from memory allows it to confidently make things up; LLM's are trained to be helpful, and "I don't know" fights that instinct. In order to stop this instinct, the retrieval must be grounded and verified before outputting any answers.
 
-Retrieval is implemented in raw SQL over PostgreSQL + pgvector, not hidden behind a framework or an ORM. Implementing the retrieval layer directly in SQL instead of reaching for a library allows me to specifically build everything into one Postgres database, allowing me to debug retrieval and grounding problems directly on my own terms. Layer by layer, this will eventually allow me to build Zoned into a hybrid-search RAG system with citation verification and cross-encoder reranking. Raw SQL is also a deliberate architectural choice for this project, allowing me to build real SQL fluency.
+Retrieval is implemented in raw SQL over PostgreSQL + pgvector, not hidden behind a framework or an ORM. Implementing the retrieval layer directly in SQL instead of reaching for a library enables me to specifically build everything into one Postgres database, allowing me to debug retrieval and grounding problems directly how I want to. Layer by layer, this will eventually let me to build Zoned into a hybrid-search RAG system with citation verification and cross-encoder reranking. Raw SQL is also a deliberate architectural choice for this project, allowing me to build SQL fluency.
 
 ## Tech stack
 
