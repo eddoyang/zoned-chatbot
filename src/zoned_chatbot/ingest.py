@@ -48,55 +48,83 @@ SQL_LIST = """
 """
 
 
-def ingest(path: Path) -> None:
-    rel = str(path.relative_to(CORPUS_ROOT))
+@dataclass
+class Result:
+    rel: str
+    status: str
+    detail: str = ""
+
+
+def ingest_one(conn: psycopg.Connection, path: Path, replace: bool = False) -> Result:
+    rel = str(path.resolve().relative_to(CORPUS_ROOT.resolve()))
     content_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+    stale_id: int | None = None
+
+
+    with conn.cursor(row_factory=dict_row) as cur:
+        cur.execute(SQL_FIND_BY_HASH, {"content_hash": content_hash})
+        row = cur.fetchone()
+        if row is not None:
+            return Result(rel, "skipped", "already ingested")
+
+        cur.execute(SQL_FIND_BY_FILENAME, {"filename": rel})
+        rows = cur.fetchall()
+        if len(rows) > 1:
+            return Result(rel, "failed", f"{len(rows)} rows share this filename")
+        
+        if rows:
+            if not replace:
+                return Result(rel, "changed", "content changed on disk; re-run with --replace")
+
+            stale_id = rows[0]["id"]
+
 
     parsed = parse(path)
     chunks = chunk(parsed)
     vectors = embed_texts([c.content for c in chunks])
 
-    assert len(chunks) == len(vectors), (
-        f"chunk/vector count mismatch: {len(chunks)} chunks, {len(vectors)} vectors"
-    )
+    with conn.transaction(), conn.cursor() as cur:
 
-    with psycopg.connect(DATABASE_URL) as conn:
-        register_vector(conn)
+        if stale_id is not None:
+            cur.execute(SQL_DELETE_DOC, {"id": stale_id})
 
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                INSERT INTO documents (title, filename, content_hash, page_count)
-                VALUES (%s, %s, %s, %s)
-                RETURNING id
-                """,
-                (path.stem, rel, content_hash, parsed.page_count),
-            )
+        
+        cur.execute(
+            SQL_INSERT_DOC,
+            {
+                "title": path.stem,
+                "filename": rel,
+                "content_hash": content_hash,
+                "page_count": parsed.page_count,
+            },
+        )
+        
 
-            doc_id = cur.fetchone()[0]
+        row = cur.fetchone(row_factory=dict_row)
+        if row is None:
+            raise RuntimeError(f"{rel}: insert conflicted after hash check")
+        
+        doc_id = row["id"]
 
-            cur.executemany(
-                """
-                INSERT INTO chunks
-                (doc_id, chunk_index, content, page, char_start, char_end, embedding)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
-                """,
-                [
-                    (
-                        doc_id,
-                        c.index,
-                        c.content,
-                        c.page,
-                        c.char_start,
-                        c.char_end,
-                        Vector(v),
-                    )
-                    for c, v in zip(chunks, vectors)
-                ],
-            )
-
-    print(f"ingested {rel}: {len(chunks)} chunks, {parsed.page_count} pages")
+        cur.executemany(
+            SQL_INSERT_CHUNKS,
+            [       
+                {
+                    "doc_id": doc_id,
+                    "chunk_index": c.index,
+                    "content": c.content,
+                    "page": c.page,
+                    "char_start": c.char_start,
+                    "char_end": c.char_end,
+                    "embedding": Vector(v),
+                }
+                for c, v in zip(chunks, vectors, strict=True)
+            ],
+        )
+        
+    status = "replaced" if stale_id is not None else "ingested"
+    return Result(rel, status, f"{len(chunks)} chunks, {parsed.page_count} pages")
 
 
 if __name__ == "__main__":
-    ingest(Path(sys.argv[1]).resolve())
+    pass
