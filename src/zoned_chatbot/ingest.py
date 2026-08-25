@@ -14,7 +14,7 @@ from .embed import embed_texts
 from .parse import parse
 
 SQL_FIND_BY_HASH = """
-    SELECT id FROM documents WHERE content_hash = %(content_hash)s
+    SELECT id, filename FROM documents WHERE content_hash = %(content_hash)s
 """
 
 SQL_FIND_BY_FILENAME = """
@@ -47,6 +47,10 @@ SQL_LIST = """
     ORDER BY d.filename
 """
 
+SQL_UPDATE_FILENAME = """
+    UPDATE documents SET filename = %(filename)s WHERE id = %(id)s
+"""
+
 
 @dataclass
 class Result:
@@ -61,20 +65,36 @@ def ingest_one(conn: psycopg.Connection, path: Path, replace: bool = False) -> R
     stale_id: int | None = None
 
 
-    with conn.cursor(row_factory=dict_row) as cur:
+    with conn.cursor() as cur:
+
         cur.execute(SQL_FIND_BY_HASH, {"content_hash": content_hash})
         row = cur.fetchone()
+
         if row is not None:
-            return Result(rel, "skipped", "already ingested")
+            # Same content, same path; already exists
+            if row["filename"] == rel:
+                return Result(rel, "skipped", "already ingested")
+
+            # Same content, different path, old file still on disk; duplicate
+            old = CORPUS_ROOT / row["filename"]
+            if old.exists():
+                return Result(rel, "failed", f"identical content to {row['filename']}")
+
+            # Same content, different path, old file gone; rename
+            cur.execute(SQL_UPDATE_FILENAME, {"id": row["id"], "filename": rel})
+            return Result(rel, "renamed", f"was {row['filename']}")
+
+
 
         cur.execute(SQL_FIND_BY_FILENAME, {"filename": rel})
         rows = cur.fetchall()
+
         if len(rows) > 1:
             return Result(rel, "failed", f"{len(rows)} rows share this filename")
         
         if rows:
             if not replace:
-                return Result(rel, "changed", "content changed on disk; re-run with --replace")
+                return Result(rel, "changed", "file differs from ingested version; re-run with --replace")
 
             stale_id = rows[0]["id"]
 
@@ -100,7 +120,7 @@ def ingest_one(conn: psycopg.Connection, path: Path, replace: bool = False) -> R
         )
         
 
-        row = cur.fetchone(row_factory=dict_row)
+        row = cur.fetchone()
         if row is None:
             raise RuntimeError(f"{rel}: insert conflicted after hash check")
         
@@ -124,6 +144,42 @@ def ingest_one(conn: psycopg.Connection, path: Path, replace: bool = False) -> R
         
     status = "replaced" if stale_id is not None else "ingested"
     return Result(rel, status, f"{len(chunks)} chunks, {parsed.page_count} pages")
+
+
+def ingest_dir(root: Path, replace: bool = False, force: bool = False) -> list[Result]:
+    root = root.resolve()
+    corpus = CORPUS_ROOT.resolve()
+    if not root.is_relative_to(corpus):
+        raise ValueError(f"{root} is outside {corpus}")
+    
+
+    results: list[Result] = []
+
+    paths = sorted(root.rglob("*.pdf"))
+
+    with psycopg.connect(DATABASE_URL, autocommit=True, row_factory=dict_row) as conn:
+        register_vector(conn)
+
+        if force:
+            with conn.cursor() as cur:
+                cur.execute("TRUNCATE documents CASCADE")
+
+        for path in paths:
+            rel = path.resolve().relative_to(corpus)
+
+            try:
+                # Skip any deferred documents for now.
+                if "deferred" in rel.parts:
+                    results.append(Result(str(rel), "deferred"))
+                else:
+                    results.append(ingest_one(conn, path, replace=replace))
+                
+            except Exception as exc:  # noqa: BLE001
+                results.append(Result(str(rel), "failed", f"{type(exc).__name__}: {exc}"))
+
+            print(f"{results[-1].status:9} {results[-1].rel} {results[-1].detail}")
+        
+    return results
 
 
 if __name__ == "__main__":
