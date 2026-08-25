@@ -31,7 +31,7 @@ OpenAI `text-embedding-3-small` (1536d)
 | Phase | Goal | Status |
 | --- | --- | --- |
 | 0 | Corpus, golden sets, environment | Done |
-| 1 | Skeleton: one PDF in, one right answer out, with a real schema | Done |
+| 1 | Skeleton: input one PDF, output one answer, a real schema | Done |
 | 2 | Multi-document retrieval, idempotent ingestion, attribution | In Progress |
 | 3 | Hybrid search, reranking, contextual retrieval | Planned |
 | 4 | Grounding and reliable refusal (retrieval floor, citations, span verification) | Planned |
