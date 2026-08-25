@@ -190,7 +190,24 @@ def summarize(results: list[Result]) -> None:
     if counts["failed"]:
         sys.exit(1)
 
+def list_docs() -> None:
+    with psycopg.connect(DATABASE_URL, row_factory=dict_row) as conn:
+        register_vector(conn)
 
+        with conn.cursor() as cur:
+            cur.execute(SQL_LIST)
+            rows = cur.fetchall()
+    
+    if not rows:
+        print("No documents ingested")
+        return
+    
+    print(f"{'id':>4}  {'filename':<32} {'pages':>6} {'chunks':>7} {'lo':>4} {'hi':>5}")
+    for r in rows:
+        print(
+            f"{r['id']:>4}  {r['filename']:<32} {r['page_count'] or 0:>6} "
+            f"{r['chunks']:>7} {r['lo'] or 0:>4} {r['hi'] or 0:>5}"
+        )
 
 
 if __name__ == "__main__":
