@@ -3,15 +3,27 @@ from pgvector import Vector
 from pgvector.psycopg import register_vector
 from psycopg.rows import dict_row
 
-from .config import DATABASE_URL, TOP_K
+from .config import DATABASE_URL, PER_DOC_CAP, POOL_SIZE, TOP_K
 from .embed import embed_query
 
 SQL = """
-SELECT c.id, c.content, c.page, d.title, d.filename,
-    c.embedding <=> %(qvec)s AS distance
-FROM chunks c
-JOIN documents d ON d.id = c.doc_id
-ORDER BY c.embedding <=> %(qvec)s
+WITH pool AS (
+    SELECT c.id, c.doc_id, c.content, c.page,
+            c.embedding <=> %(qvec)s AS distance
+    FROM chunks c
+    ORDER BY c.embedding <=> %(qvec)s
+    LIMIT %(pool)s
+),
+ranked AS (
+    SELECT p.*,
+            ROW_NUMBER() OVER (PARTITION BY p.doc_id ORDER BY p.distance) AS per_doc
+    FROM pool p
+)
+SELECT r.id, r.content, r.page, r.distance, d.title, d.filename
+FROM ranked r
+JOIN documents d ON d.id = r.doc_id
+WHERE r.per_doc <= %(cap)s
+ORDER BY r.distance
 LIMIT %(k)s;
 """
 
@@ -21,5 +33,5 @@ def retrieve(question: str, k: int = TOP_K) -> list[dict]:
     with psycopg.connect(DATABASE_URL, row_factory=dict_row) as conn:
         register_vector(conn)
         with conn.cursor() as cur:
-            cur.execute(SQL, {"qvec": qvec, "k": k})
+            cur.execute(SQL, {"qvec": qvec, "pool": POOL_SIZE, "cap": PER_DOC_CAP, "k": k})
             return cur.fetchall()
