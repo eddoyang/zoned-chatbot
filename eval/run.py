@@ -6,7 +6,6 @@ from zoned_chatbot.config import TOP_K
 from zoned_chatbot.retrieve import retrieve
 
 ROOT = Path(__file__).resolve().parents[1]
-KEEP = {"real-F09", "real-F10", "real-F11"}
 
 rows = [
     json.loads(line)
@@ -16,15 +15,18 @@ rows = [
 
 out = []
 for r in rows:
-    if r["id"] not in KEEP and r["type"] != "refusal":
+    if r["type"] == "expected_fail":
         continue
-    hits = retrieve(r["question"], k=TOP_K)
+    
+    answer = ask(r["question"])
+    hits = answer.hits
     out.append(
         {
             "id": r["id"],
             "type": r["type"],
             "question": r["question"],
             "expected": r.get("expected_answer"),
+            "expected_docs": r.get("expected_docs"),
             "answer": ask(r["question"], hits),
             "retrieved_pages": [h["page"] for h in hits],
             "retrieved_docs": sorted({h["filename"] for h in hits}),
@@ -32,5 +34,5 @@ for r in rows:
         }
     )
 
-(ROOT / "eval/baseline_phase1.json").write_text(json.dumps(out, indent=2))
+(ROOT / "eval/baseline_phase2.json").write_text(json.dumps(out, indent=2))
 print(f"wrote {len(out)} results")

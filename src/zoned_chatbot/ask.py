@@ -1,4 +1,5 @@
 import sys
+from dataclasses import dataclass
 
 from anthropic import Anthropic
 
@@ -8,22 +9,30 @@ from .retrieve import retrieve
 client = Anthropic()
 
 SYSTEM = (
-    "Answer the question using only the provided document excerpts. "
-    "Cite the document title and page for each claim. "
+    "Answer the question using only the provided document excerpts."
+    "Cite the document title and page for each claim."
     "If the excerpts do not contain the answer, say so plainly."
+    "When excerpts from different documents give different answers, report both with their sources rather than choosing between them."
+    
 )
 
+@dataclass
+class Answer:
+    text: str
+    hits: list[dict]
+    
 
-def ask(question: str, hits: list[dict] | None = None) -> str:
+def ask(question: str, hits: list[dict] | None = None) -> Answer:
     if hits is None:
         hits = retrieve(question, k=TOP_K)
 
     context = "\n\n---\n\n".join(
-        f"[{h['title']}, p.{h['page']}]\n{h['content']}" for h in hits
+        f"[{h['title']} | {h['filename']} | p.{h['page']}]\n{h['content']}"
+        for h in hits
     )
 
     msg = client.messages.create(
-        model="claude-sonnet-4-5",
+        model="claude-sonnet-5",
         max_tokens=1024,
         system=SYSTEM,
         messages=[
@@ -34,11 +43,12 @@ def ask(question: str, hits: list[dict] | None = None) -> str:
         ],
     )
 
-    return msg.content[0].text
+    return Answer(msg.context[0], hits)
 
 
 def main() -> None:
-    print(ask(" ".join(sys.argv[1:])))
+    answer = ask(" ".join(sys.argv[1:]))
+    print(answer.text)
 
 
 if __name__ == "__main__":
