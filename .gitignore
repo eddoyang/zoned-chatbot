@@ -30,3 +30,6 @@ docs/
 
 # Scratch
 scratch_*.py
+
+# Grade
+grade.py
