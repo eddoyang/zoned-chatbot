@@ -16,21 +16,26 @@ for r in rows:
     if r["type"] == "expected_fail":
         continue
 
-    answer = ask(r["question"])
-    hits = answer.hits
-    out.append(
-        {
-            "id": r["id"],
-            "type": r["type"],
-            "question": r["question"],
-            "expected": r.get("expected_answer"),
-            "expected_docs": r.get("expected_docs"),
-            "answer": answer.text,
-            "retrieved_pages": [h["page"] for h in hits],
-            "retrieved_docs": sorted({h["filename"] for h in hits}),
-            "distances": [round(h["distance"], 4) for h in hits],
-        }
-    )
+    try:
+        answer = ask(r["question"])
+        hits = answer.hits
+        out.append(
+            {
+                "id": r["id"],
+                "type": r["type"],
+                "question": r["question"],
+                "expected": r.get("expected_answer"),
+                "expected_docs": r.get("expected_docs"),
+                "answer": answer.text,
+                "retrieved_pages": [h["page"] for h in hits],
+                "retrieved_docs": sorted({h["filename"] for h in hits}),
+                "distances": [round(h["distance"], 4) for h in hits],
+            }
+        )
+    except Exception as exc:  # noqa: BLE001
+        out.append({"id": r["id"], "type": r["type"], "error": f"{type(exc).__name__}: {exc}"})
+        print(f"failed {r['id']}: {type(exc).__name__}: {exc}")
+
 
 (ROOT / "eval/baseline_phase2.json").write_text(json.dumps(out, indent=2))
 print(f"wrote {len(out)} results")
