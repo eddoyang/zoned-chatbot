@@ -36,6 +36,12 @@ OpenAI `text-embedding-3-small` (1536d)
 | 3 | Hybrid search, reranking, contextual retrieval | In-progress |
 | 4 | Grounding and reliable refusal (retrieval floor, citations, span verification) | Planned |
 
+## Golden Set Evaluation
+Golden set contains 4 different question types
+- **factual**: Questions that can be answered from sources in the corpora.
+- **which_document**: Questions that test the retrievals ability to select the correct source document before the correct passage
+- **refusal**: Questions that currently can _not_ be answered from sources in the corpora, and should be refused.
+- **expected_fail**: Questions that the RAG system is currently unable to answer due to current limited parsing capabilities; Currently excluded in evaluations.
 
 ## Phase 1 Baseline
 ```
@@ -47,7 +53,8 @@ OpenAI `text-embedding-3-small` (1536d)
 ```
 #### Diagnosis: 
 - The missed factual question was a precision problem; Correct chunks were retrieved, but all answers were ranked outside the top 5 window.
-- All cosine distances were relatively high, with every answer greater than 0.40. 
+- All cosine distances were relatively high, with every answer greater than 0.40.
+- The spread of the top 5 hits across all three factual questions were 0.42-0.55.
 - Every refusal answer started with a variation of "I cannot answer" or "The excerpt does not contain...", and then a short explanation of what the excerpt actually contains.
 - Refusal answers gives us page numbers, however generally being random and within the document size.
 - Refusal score is not yet a meaningful number. Expected to drop once given more documents.
