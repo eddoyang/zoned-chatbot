@@ -44,7 +44,8 @@ def ask(question: str, hits: list[dict] | None = None) -> Answer:
         ],
     )
 
-    return Answer(msg.content[0].text, hits)
+    text = "".join(b.text for b in msg.content if b.type == "text")
+    return Answer(text, hits)
 
 
 def main() -> None:
