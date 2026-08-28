@@ -11,7 +11,7 @@ WITH pool AS (
     SELECT c.id, c.doc_id, c.content, c.page,
             c.embedding <=> %(qvec)s AS distance
     FROM chunks c
-    WHERE c.doc_id IS NULL OR c.doc_id = ANY(%(doc_ids)s)
+    WHERE %(doc_ids)s::bigint[] IS NULL OR c.doc_id = ANY(%(doc_ids)s)
     ORDER BY c.embedding <=> %(qvec)s
     LIMIT %(pool)s
 ),

@@ -2,8 +2,6 @@ import json
 from pathlib import Path
 
 from zoned_chatbot.ask import ask
-from zoned_chatbot.config import TOP_K
-from zoned_chatbot.retrieve import retrieve
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -17,7 +15,7 @@ out = []
 for r in rows:
     if r["type"] == "expected_fail":
         continue
-    
+
     answer = ask(r["question"])
     hits = answer.hits
     out.append(
@@ -27,7 +25,7 @@ for r in rows:
             "question": r["question"],
             "expected": r.get("expected_answer"),
             "expected_docs": r.get("expected_docs"),
-            "answer": ask(r["question"], hits),
+            "answer": answer.text,
             "retrieved_pages": [h["page"] for h in hits],
             "retrieved_docs": sorted({h["filename"] for h in hits}),
             "distances": [round(h["distance"], 4) for h in hits],

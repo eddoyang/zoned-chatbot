@@ -9,18 +9,19 @@ from .retrieve import retrieve
 client = Anthropic()
 
 SYSTEM = (
-    "Answer the question using only the provided document excerpts."
-    "Cite the document title and page for each claim."
-    "If the excerpts do not contain the answer, say so plainly."
-    "When excerpts from different documents give different answers, report both with their sources rather than choosing between them."
-    
+    "Answer the question using only the provided document excerpts. "
+    "Cite the document title and page for each claim. "
+    "If the excerpts do not contain the answer, say so plainly. "
+    "When excerpts from different documents give different answers, "
+    "report both with their sources rather than choosing between them."
 )
+
 
 @dataclass
 class Answer:
     text: str
     hits: list[dict]
-    
+
 
 def ask(question: str, hits: list[dict] | None = None) -> Answer:
     if hits is None:
@@ -43,7 +44,7 @@ def ask(question: str, hits: list[dict] | None = None) -> Answer:
         ],
     )
 
-    return Answer(msg.context[0], hits)
+    return Answer(msg.content[0].text, hits)
 
 
 def main() -> None:
