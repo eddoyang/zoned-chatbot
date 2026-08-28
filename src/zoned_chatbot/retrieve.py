@@ -31,11 +31,11 @@ LIMIT %(k)s;
 
 def retrieve(
     question: str,
-    k: int = TOP_K, 
+    k: int = TOP_K,
     doc_ids: list[int] | None = None,
-    cap: int | None = None
+    cap: int | None = None,
 ) -> list[dict]:
-    
+
     if cap is None:
         cap = k if doc_ids and len(doc_ids) == 1 else PER_DOC_CAP
 

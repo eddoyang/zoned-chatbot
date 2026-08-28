@@ -33,7 +33,6 @@ for r in rows:
     if r["type"] == "expected_fail":
         continue
 
-
     rec = {
         "id": r["id"],
         "type": r["type"],
@@ -47,8 +46,12 @@ for r in rows:
         answer = ask(r["question"])
         rec["answer"] = answer.text
         rec["hits"] = [
-            {"doc": h["filename"], "page": h["page"],
-            "distance": round(h["distance"], 4), "chunk_id": h["id"]}
+            {
+                "doc": h["filename"],
+                "page": h["page"],
+                "distance": round(h["distance"], 4),
+                "chunk_id": h["id"],
+            }
             for h in answer.hits
         ]
     except Exception as exc:  # noqa: BLE001
