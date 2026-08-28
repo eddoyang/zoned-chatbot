@@ -30,9 +30,15 @@ LIMIT %(k)s;
 
 
 def retrieve(
-    question: str, k: int = TOP_K, doc_ids: list[int] | None = None
+    question: str,
+    k: int = TOP_K, 
+    doc_ids: list[int] | None = None,
+    cap: int | None = None
 ) -> list[dict]:
-    cap = k if doc_ids and len(doc_ids) == 1 else PER_DOC_CAP
+    
+    if cap is None:
+        cap = k if doc_ids and len(doc_ids) == 1 else PER_DOC_CAP
+
     qvec = Vector(embed_query(question))
     with psycopg.connect(DATABASE_URL, row_factory=dict_row) as conn:
         register_vector(conn)
