@@ -1,0 +1,1401 @@
+[
+  {
+    "id": "real-F01",
+    "type": "factual",
+    "question": "How much revenue did NVIDIA generate in fiscal year 2026?",
+    "expected": "$215,938 million.",
+    "expected_docs": [
+      "nvda_10k_fy2026.pdf"
+    ],
+    "expected_page": 51,
+    "answer": "According to NVIDIA's FY2026 10-K, total revenue for fiscal year 2026 (year ended January 25, 2026) was **$215,938 million** (approximately $215.9 billion) (nvda_10k_fy2026.pdf, p.78 and p.77).\n\nThis compares to $130,497 million in fiscal year 2025 and $60,922 million in fiscal year 2024 (nvda_10k_fy2026.pdf, p.78).\n\nBy segment, this revenue was composed of:\n- **Data Center**: $193,737 million (nvda_10k_fy2026.pdf, p.78)\n- **Gaming**: $16,042 million (nvda_10k_fy2026.pdf, p.78)\n- **Professional Visualization**: $3,191 million (nvda_10k_fy2026.pdf, p.78)\n- **Automotive**: $2,349 million (nvda_10k_fy2026.pdf, p.78)\n- **OEM and Other**: $619 million (nvda_10k_fy2026.pdf, p.78)\n\nBy reportable segment, Compute & Networking generated $193,479 million and Graphics generated $22,459 million in revenue for the year ended January 25, 2026 (nvda_10k_fy2026.pdf, p.77).",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 78,
+        "distance": 0.3016,
+        "chunk_id": 1234
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.3046,
+        "chunk_id": 1233
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3066,
+        "chunk_id": 1187
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3075,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 39,
+        "distance": 0.3094,
+        "chunk_id": 1038
+      }
+    ]
+  },
+  {
+    "id": "real-F02",
+    "type": "factual",
+    "question": "What was NVIDIA's acquisition termination cost in fiscal year 2025?",
+    "expected": "None. The line item is a dash (0) for fiscal 2025; the $1,353 million charge was in fiscal 2023.",
+    "expected_docs": [
+      "nvda_10k_fy2025.pdf"
+    ],
+    "expected_page": 52,
+    "answer": "Based on the provided excerpts, NVIDIA did not incur an acquisition termination cost in fiscal year 2025. According to the FY2025 10-K (nvda_10k_fy2025.pdf, p.78), the reconciling items table shows \"Acquisition termination cost\" of **$0** (\"-\") for fiscal year 2025, compared to $1,353 million ($1.4 billion) recorded in fiscal year 2023.\n\nThe related note (nvda_10k_fy2025.pdf, p.62) explains that this $1.4 billion charge was recorded in **fiscal year 2023**, stemming from the termination of the Arm Share Purchase Agreement with SoftBank in February 2022, which reflected the write-off of a prepayment made at signing. No such cost was recorded in fiscal year 2025.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3513,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 62,
+        "distance": 0.3652,
+        "chunk_id": 1062
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 76,
+        "distance": 0.3785,
+        "chunk_id": 1232
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 79,
+        "distance": 0.3787,
+        "chunk_id": 1081
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.38,
+        "chunk_id": 1233
+      }
+    ]
+  },
+  {
+    "id": "real-F03",
+    "type": "factual",
+    "question": "How much revenue did NVIDIA's Graphics segment generate in fiscal year 2024?",
+    "expected": "$13,517 million.",
+    "expected_docs": [
+      "nvda_10k_fy2025.pdf"
+    ],
+    "expected_page": 41,
+    "answer": "According to NVIDIA's FY2026 10-K, the Graphics segment generated **$13,517 million** ($13.517 billion) in revenue for fiscal year 2024 (year ended January 28, 2024) (nvda_10k_fy2026.pdf, p.77).\n\nThis figure is corroborated in the FY2025 10-K, which also reports Graphics segment revenue of **$13,517 million** for fiscal year 2024 (nvda_10k_fy2025.pdf, p.40).\n\nBoth documents agree on this figure, with no discrepancy noted between sources.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.2742,
+        "chunk_id": 1233
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.2761,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 76,
+        "distance": 0.2892,
+        "chunk_id": 1232
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 40,
+        "distance": 0.2967,
+        "chunk_id": 1039
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 40,
+        "distance": 0.2992,
+        "chunk_id": 1193
+      }
+    ]
+  },
+  {
+    "id": "real-F04",
+    "type": "factual",
+    "question": "How many employees did NVIDIA have at the end of fiscal year 2026, and in how many countries?",
+    "expected": "Approximately 42,000 employees in 38 countries; 31,000 in research and development and 11,000 in sales, marketing, operations and administration.",
+    "expected_docs": [
+      "nvda_10k_fy2026.pdf"
+    ],
+    "expected_page": 11,
+    "answer": "Based on the provided excerpts, I cannot answer this question. The documents include employee headcount information for fiscal year 2025 (approximately 36,000 employees in 38 countries, per NVIDIA's FY2025 10-K, p.11), but no excerpt provided contains the equivalent employee count or country count for fiscal year 2026.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 78,
+        "distance": 0.3203,
+        "chunk_id": 1234
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3204,
+        "chunk_id": 995
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.3429,
+        "chunk_id": 1233
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3517,
+        "chunk_id": 994
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3539,
+        "chunk_id": 1187
+      }
+    ]
+  },
+  {
+    "id": "real-F05",
+    "type": "factual",
+    "question": "What gross margin did NVIDIA report for fiscal year 2026, and why did it change?",
+    "expected": "71.1%, down from 75.0%. The decrease was attributed to the transition from Hopper HGX systems to Blackwell full-scale datacenter solutions.",
+    "expected_docs": [
+      "nvda_10k_fy2026.pdf"
+    ],
+    "expected_page": 37,
+    "answer": "According to NVIDIA's FY2026 10-K, gross profit (margin) was **71.1% of revenue** for the fiscal year ended January 25, 2026, down from **75.0%** in fiscal year 2025 (nvda_10k_fy2026.pdf, p.39). This corresponds to cost of revenue rising from 25.0% of revenue in FY2025 to 28.9% in FY2026 (nvda_10k_fy2026.pdf, p.39).\n\nRegarding the reason for the change: the provided excerpts do not contain an explicit explanation from NVIDIA for why gross margin declined in fiscal year 2026. The FY2026 10-K excerpt does note that \"Revenue growth in fiscal year 2026 was driven by data center compute and networking platforms for accelerated computing and AI solutions\" and that \"Blackwell architectures represented the majority of our Data Center revenue\" (nvda_10k_fy2026.pdf, p.35), but this passage discusses revenue drivers rather than directly attributing the gross margin decline to a specific cause. No further detail on the cause of the margin change is present in the excerpts provided.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 39,
+        "distance": 0.322,
+        "chunk_id": 1192
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 39,
+        "distance": 0.3244,
+        "chunk_id": 1038
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3326,
+        "chunk_id": 1187
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3352,
+        "chunk_id": 1032
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3377,
+        "chunk_id": 1080
+      }
+    ]
+  },
+  {
+    "id": "real-F06",
+    "type": "factual",
+    "question": "What did NVIDIA spend on research and development in fiscal year 2026?",
+    "expected": "$18,497 million.",
+    "expected_docs": [
+      "nvda_10k_fy2026.pdf"
+    ],
+    "expected_page": 51,
+    "answer": "Based on the excerpts provided, I cannot find an explicit dollar figure for NVIDIA's fiscal year 2026 R&D expenditure. However, the documents do provide the information needed to derive an approximate figure:\n\n- **R&D as % of revenue (FY2026):** 8.6% of total revenue (nvda_10k_fy2026.pdf, p.39)\n- **Total revenue (FY2026):** $215,938 million (nvda_10k_fy2026.pdf, p.39 and p.78)\n\nMultiplying these figures (8.6% \u00d7 $215,938 million) yields an approximate R&D spend of **~$18,571 million** for fiscal year 2026. Note that this is a calculation derived from the percentage disclosure in the excerpt, not a directly stated dollar figure in the provided text \u2014 the excerpts do not contain an explicit line-item dollar amount for R&D expense in FY2026 (nvda_10k_fy2026.pdf, p.39).\n\nFor comparison, the prior year (FY2025) R&D was 9.9% of revenue on total revenue of $130,497 million (nvda_10k_fy2025.pdf, p.39; nvda_10k_fy2026.pdf, p.78), implying roughly $12,919 million, though again this is a derived figure rather than one explicitly stated in the excerpts.\n\nIf you need the precise audited R&D dollar figure, it would likely appear in the Consolidated Statements of Income, which is not included in the excerpts provided.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3602,
+        "chunk_id": 1187
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3729,
+        "chunk_id": 1032
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 39,
+        "distance": 0.3739,
+        "chunk_id": 1038
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 78,
+        "distance": 0.3768,
+        "chunk_id": 1234
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 39,
+        "distance": 0.3806,
+        "chunk_id": 1192
+      }
+    ]
+  },
+  {
+    "id": "real-F07",
+    "type": "factual",
+    "question": "Who is NVIDIA's independent auditor, and since what year have they served?",
+    "expected": "PricewaterhouseCoopers LLP, serving as auditor since 2004.",
+    "expected_docs": [
+      "nvda_10k_fy2025.pdf"
+    ],
+    "expected_page": 51,
+    "answer": "Based on the provided excerpts, NVIDIA's independent auditor is **PricewaterhouseCoopers LLP (PwC)**, based in San Jose, California (nvda_10k_fy2026.pdf, p.87).\n\nHowever, the excerpts **do not state the year PwC began serving as NVIDIA's auditor**. The documents only reference:\n- A report dated February 25, 2026, related to the FY2026 10-K financial statements (nvda_10k_fy2026.pdf, p.87)\n- Audit opinions covering the three-year periods ended January 26, 2025 and January 25, 2026, respectively (nvda_10k_fy2025.pdf, p.49; nvda_10k_fy2026.pdf, p.47)\n- PCAOB ID: 238 is listed for the accounting firm (nvda_10k_fy2025.pdf, p.49; nvda_10k_fy2026.pdf, p.47), which corresponds to PwC, though this ID is not explicitly matched to the firm name in the fy2025 excerpt\n\nThe excerpts confirm PwC audited at least the three fiscal years ending January 29, 2023 through January 25, 2026, but no starting date or tenure information is provided in the given material.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 13,
+        "distance": 0.4201,
+        "chunk_id": 997
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 49,
+        "distance": 0.423,
+        "chunk_id": 1048
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 47,
+        "distance": 0.4347,
+        "chunk_id": 1202
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 87,
+        "distance": 0.4379,
+        "chunk_id": 1242
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 90,
+        "distance": 0.4401,
+        "chunk_id": 1243
+      }
+    ]
+  },
+  {
+    "id": "real-F08",
+    "type": "factual",
+    "question": "How many shares did NVIDIA repurchase in fiscal year 2026, and for how much?",
+    "expected": "282 million shares for $40.4 billion.",
+    "expected_docs": [
+      "nvda_10k_fy2026.pdf"
+    ],
+    "expected_page": 33,
+    "answer": "Based on the provided excerpts, I could not find information on the number of shares NVIDIA repurchased in fiscal year 2026 or the total amount spent.\n\nThe excerpts do include NVIDIA's share repurchase data for fiscal years 2025 and 2024: \"In fiscal years 2025 and 2024, we repurchased 310 million and 210 million shares of our common stock for $34.0 billion and $9.7 billion, respectively\" (nvda_10k_fy2025.pdf, p.77). The excerpts also note that from January 27, 2025 through February 21, 2025, NVIDIA repurchased 29 million shares for $3.7 billion (nvda_10k_fy2025.pdf, p.77) \u2014 this activity would fall within fiscal year 2026, but this is only a partial-period figure, not the full fiscal year 2026 total.\n\nThe fiscal year 2026 10-K excerpts provided (pp. 35 and 62) do not include a share repurchase summary for fiscal year 2026, so a complete answer to your question cannot be given from these documents alone.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 77,
+        "distance": 0.3107,
+        "chunk_id": 1078
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 54,
+        "distance": 0.3304,
+        "chunk_id": 1052
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 62,
+        "distance": 0.333,
+        "chunk_id": 1218
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3368,
+        "chunk_id": 1032
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.34,
+        "chunk_id": 1187
+      }
+    ]
+  },
+  {
+    "id": "real-F09",
+    "type": "factual",
+    "question": "What generator model does the RAG paper use, and how many parameters does it have?",
+    "expected": "BART-large, a pre-trained seq2seq transformer with 400M parameters.",
+    "expected_docs": [
+      "rag_lewis.pdf"
+    ],
+    "expected_page": 3,
+    "answer": "Based on the excerpts, the RAG paper (rag_lewis.pdf) uses **BART-large** as the generator model, which has **406M trainable parameters** (rag_lewis, p.18).\n\nThis BART-large generator is combined with a document encoder to produce a total of 626M trainable parameters in the overall RAG system (rag_lewis, p.18), though the document encoder's parameters were not trained by the authors themselves (\"the document encoder ourselves\").\n\nThe other document (ai_index_2025.pdf) discusses RAG as a general concept and benchmarking but does not specify the generator model or parameter count used in the original RAG paper.",
+    "hits": [
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 2,
+        "distance": 0.4507,
+        "chunk_id": 1248
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 18,
+        "distance": 0.4599,
+        "chunk_id": 1270
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 6,
+        "distance": 0.4702,
+        "chunk_id": 1254
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 115,
+        "distance": 0.5676,
+        "chunk_id": 379
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 113,
+        "distance": 0.5779,
+        "chunk_id": 378
+      }
+    ]
+  },
+  {
+    "id": "real-F10",
+    "type": "factual",
+    "question": "Which Wikipedia dump does the RAG paper use, and how many documents does it produce?",
+    "expected": "The December 2018 dump, split into disjoint 100-word chunks for a total of 21M documents.",
+    "expected_docs": [
+      "rag_lewis.pdf"
+    ],
+    "expected_page": 4,
+    "answer": "According to \"rag_lewis.pdf\" (p.4): the RAG paper uses the **December 2018** Wikipedia dump, following Lee et al. [31] and Karpukhin et al. [26]. Each Wikipedia article is split into disjoint 100-word chunks, producing a total of **21M documents**.",
+    "hits": [
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 9,
+        "distance": 0.4679,
+        "chunk_id": 1258
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 4,
+        "distance": 0.4816,
+        "chunk_id": 1250
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 18,
+        "distance": 0.5124,
+        "chunk_id": 1269
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 147,
+        "distance": 0.6572,
+        "chunk_id": 739
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 385,
+        "distance": 0.6581,
+        "chunk_id": 905
+      }
+    ]
+  },
+  {
+    "id": "real-F11",
+    "type": "factual",
+    "question": "What hardware did the RAG authors train on, and how much CPU memory does the Wikipedia index require?",
+    "expected": "8 x 32GB NVIDIA V100 GPUs; approximately 100 GB of CPU memory, reduced to 36GB using FAISS compression.",
+    "expected_docs": [
+      "rag_lewis.pdf"
+    ],
+    "expected_page": 17,
+    "answer": "Based on the provided excerpts, this information is not available. The excerpts from \"rag_lewis.pdf\" discuss RAG's experimental setup, parameters, and Wikipedia dump details (e.g., the December 2018 dump split into 21M documents, indexed with FAISS using a Hierarchical Navigable Small World approximation for fast retrieval \u2014 see p.4), but none of the provided pages mention the specific hardware used for training RAG or the CPU memory requirements for the Wikipedia index.\n\nThe \"ai_index_2025.pdf\" excerpts discuss general AI hardware trends and training costs for various large models (e.g., Llama 3.1-405B, GPT-4), but do not contain information specific to the RAG paper's training hardware or memory requirements.\n\nIf you need this specific information, it may be found in other sections of the RAG paper (such as an appendix on implementation details) not included in these excerpts.",
+    "hits": [
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 9,
+        "distance": 0.4203,
+        "chunk_id": 1258
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 4,
+        "distance": 0.4393,
+        "chunk_id": 1250
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 18,
+        "distance": 0.4627,
+        "chunk_id": 1269
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 67,
+        "distance": 0.5364,
+        "chunk_id": 347
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 115,
+        "distance": 0.5437,
+        "chunk_id": 379
+      }
+    ]
+  },
+  {
+    "id": "real-F12",
+    "type": "factual",
+    "question": "What average accuracy does OctoTools achieve across the 16 benchmarks, and by how much does it beat chain-of-thought?",
+    "expected": "58.5% average accuracy, +7.7 points over chain-of-thought (50.8) and +9.3 over zero-shot (49.2).",
+    "expected_docs": [
+      "2026.acl-long.1.pdf"
+    ],
+    "expected_page": 7,
+    "answer": "Based on the excerpts from \"2026.acl-long.1\" (p.7), OctoTools achieves an **average accuracy of 58.5%** across the 16 benchmarks, outperforming the chain-of-thought (CoT) baseline by **+7.7%** (and outperforming the zero-shot baseline by +9.3%) (\"2026.acl-long.1 | 2026.acl-long.1.pdf | p.7\"). This is corroborated on page 6, which states: \"OctoTools achieves consistent gains, outperforming zero-shot and CoT baselines by 9.3% and 7.7% on average, respectively\" (\"2026.acl-long.1 | 2026.acl-long.1.pdf | p.6\").",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.2666,
+        "chunk_id": 241
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.3,
+        "chunk_id": 243
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 6,
+        "distance": 0.301,
+        "chunk_id": 239
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 104,
+        "distance": 0.4219,
+        "chunk_id": 706
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 99,
+        "distance": 0.4403,
+        "chunk_id": 701
+      }
+    ]
+  },
+  {
+    "id": "real-F13",
+    "type": "factual",
+    "question": "How many visits and user queries has the OctoTools interactive demo received?",
+    "expected": "Over 22.9K visits and 3.6K user queries; of 100 sampled feedback entries, 69% were positive up-votes.",
+    "expected_docs": [
+      "2026.acl-long.1.pdf"
+    ],
+    "expected_page": 19,
+    "answer": "According to \"OctoTools\" (2026.acl-long.1, p.18), the interactive online demo has attracted **over 22.9K visits and processed 3.6K user queries**. Of 100 sampled feedback entries, 69% were positive upvotes.",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 18,
+        "distance": 0.4255,
+        "chunk_id": 260
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.5078,
+        "chunk_id": 243
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.5217,
+        "chunk_id": 241
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 37,
+        "distance": 0.618,
+        "chunk_id": 652
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 45,
+        "distance": 0.6325,
+        "chunk_id": 657
+      }
+    ]
+  },
+  {
+    "id": "real-F14",
+    "type": "factual",
+    "question": "What are the default parameter values of the OctoTools Object Detector tool card?",
+    "expected": "threshold = 0.35, model_size = 'tiny', padding = 20 pixels.",
+    "expected_docs": [
+      "2026.acl-long.1.pdf"
+    ],
+    "expected_page": 49,
+    "answer": "Based on the excerpts, only the **Advanced Object Detector Tool** (\u00a7F.2) has documented default parameter values. According to \"OctoTools\" (2026.acl-long.1, p.49), the Advanced Object Detector Tool's input parameters include:\n\n- **threshold**: \"The confidence threshold for detection (default: 0.35).\"\n- **padding**: \"The number of pixels to add as empty padding around detected objects (default: 20).\"\n\nThe excerpts do not specify default parameter values for the basic **Object Detector Tool** (as opposed to the \"Advanced\" version) \u2014 only its example inputs/outputs and the general limitation note are shown (2026.acl-long.1, p.49). The document also notes elsewhere (2026.acl-long.1, p.17) that the basic Object Detector \"performs object detection on an image given a list of object labels to detect, using the Grounding DINO model,\" and can be upgraded to the Advanced Object Detector using DINO-X, but no default values for the basic tool's parameters are given in the provided excerpts.",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 49,
+        "distance": 0.4863,
+        "chunk_id": 282
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 17,
+        "distance": 0.5241,
+        "chunk_id": 259
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.5296,
+        "chunk_id": 241
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 18,
+        "distance": 0.6678,
+        "chunk_id": 1270
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 203,
+        "distance": 0.6798,
+        "chunk_id": 439
+      }
+    ]
+  },
+  {
+    "id": "real-F15",
+    "type": "factual",
+    "question": "How many AI/ML-enabled medical devices had the FDA authorized by December 2025?",
+    "expected": "1,357 devices from 693 different companies across 17 clinical specialties.",
+    "expected_docs": [
+      "ai_index_2026.pdf"
+    ],
+    "expected_page": 274,
+    "answer": "By December 2025, the FDA had authorized a total of **1,357 AI/ML-enabled medical devices** from 693 different companies across 17 clinical specialties (AI Index 2026, p.274).",
+    "hits": [
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 274,
+        "distance": 0.254,
+        "chunk_id": 827
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 275,
+        "distance": 0.274,
+        "chunk_id": 828
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 272,
+        "distance": 0.3084,
+        "chunk_id": 826
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 309,
+        "distance": 0.351,
+        "chunk_id": 509
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 316,
+        "distance": 0.4313,
+        "chunk_id": 514
+      }
+    ]
+  },
+  {
+    "id": "real-F16",
+    "type": "factual",
+    "question": "In the Waymo-Swiss Re study, how many property damage and bodily injury claims did Waymo vehicles incur, and over how many miles?",
+    "expected": "9 property damage claims and 2 bodily injury claims across 25.3 million miles, versus 78 and 26 expected for human drivers.",
+    "expected_docs": [
+      "ai_index_2025.pdf"
+    ],
+    "expected_page": 161,
+    "answer": "According to the **AI Index Report 2025** (p.160), in the Waymo\u2013Swiss Re study, across **25.3 million miles driven**, Waymo vehicles were involved in just **9 property damage claims and 2 bodily injury claims**, compared to an expected 78 property damage claims and 26 bodily injury claims for human drivers over the same distance. This corresponds to an 88% reduction in property damage claims and a 92% reduction in bodily injury claims relative to human-driver baselines.\n\nThe excerpts from the **AI Index Report 2026** do not mention this specific Waymo\u2013Swiss Re study or these figures.",
+    "hits": [
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 124,
+        "distance": 0.4341,
+        "chunk_id": 720
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 122,
+        "distance": 0.4481,
+        "chunk_id": 719
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 158,
+        "distance": 0.4845,
+        "chunk_id": 408
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 157,
+        "distance": 0.5243,
+        "chunk_id": 406
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 160,
+        "distance": 0.5484,
+        "chunk_id": 409
+      }
+    ]
+  },
+  {
+    "id": "real-F17",
+    "type": "factual",
+    "question": "How many notable AI models did Epoch AI attribute to academia versus industry in 2025?",
+    "expected": "2 from academia versus 93 from industry; industry accounted for 91.2% of notable models.",
+    "expected_docs": [
+      "ai_index_2026.pdf"
+    ],
+    "expected_page": 19,
+    "answer": "Based on the AI Index Report 2026, which cites Epoch AI (2026) data, in **2025**:\n\n- **Academia**: 2 notable AI models (ai_index_2026.pdf, p.18)\n- **Industry**: 93 notable AI models (ai_index_2026.pdf, p.18)\n\nThe report also notes an additional category of \"Industry-academia collaboration\" (5 models) and \"Other\" (2 models) for that year (ai_index_2026.pdf, p.18). In percentage terms, industry accounted for 91.18% of notable AI models in 2025, while academia accounted for 1.96% (ai_index_2026.pdf, p.18).",
+    "hits": [
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 48,
+        "distance": 0.2189,
+        "chunk_id": 333
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 18,
+        "distance": 0.2515,
+        "chunk_id": 638
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 47,
+        "distance": 0.2838,
+        "chunk_id": 332
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 50,
+        "distance": 0.2958,
+        "chunk_id": 334
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 20,
+        "distance": 0.3207,
+        "chunk_id": 639
+      }
+    ]
+  },
+  {
+    "id": "real-W01",
+    "type": "which_document",
+    "question": "How many employees did NVIDIA have at the end of fiscal year 2025?",
+    "expected": "Approximately 36,000 employees in 38 countries; 27,100 in research and development and 8,900 in sales, marketing, operations and administration.",
+    "expected_docs": [
+      "nvda_10k_fy2025.pdf"
+    ],
+    "expected_page": 11,
+    "answer": "NVIDIA had approximately **36,000 employees in 38 countries** as of the end of fiscal year 2025, with 27,100 engaged in research and development and 8,900 engaged in sales, marketing, operations, and administrative positions (nvda_10k_fy2025.pdf, p.11).\n\nThis figure is consistent across both excerpts referencing fiscal year 2025 employee data (nvda_10k_fy2025.pdf, p.11).\n\nFor comparison, the following fiscal year 2026 10-K reports that by the end of fiscal year 2026, headcount had grown to approximately 42,000 employees in 38 countries (nvda_10k_fy2026.pdf, p.11), but this is not the figure requested for fiscal year 2025.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3311,
+        "chunk_id": 995
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3511,
+        "chunk_id": 1187
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3526,
+        "chunk_id": 994
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3547,
+        "chunk_id": 1032
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 11,
+        "distance": 0.368,
+        "chunk_id": 1150
+      }
+    ]
+  },
+  {
+    "id": "real-W02",
+    "type": "which_document",
+    "question": "How many shares did NVIDIA repurchase in fiscal year 2025, and for how much?",
+    "expected": "310 million shares for $34.0 billion.",
+    "expected_docs": [
+      "nvda_10k_fy2025.pdf"
+    ],
+    "expected_page": 33,
+    "answer": "Based on the excerpts, NVIDIA repurchased **310 million shares of common stock for $34.0 billion** during fiscal year 2025 (nvda_10k_fy2025.pdf, p.77).\n\nThis is the figure explicitly stated in the fiscal year 2025 10-K filing when discussing the Capital Return Program.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 77,
+        "distance": 0.3094,
+        "chunk_id": 1078
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 54,
+        "distance": 0.3323,
+        "chunk_id": 1052
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 62,
+        "distance": 0.3332,
+        "chunk_id": 1218
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3437,
+        "chunk_id": 1032
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 52,
+        "distance": 0.3439,
+        "chunk_id": 1206
+      }
+    ]
+  },
+  {
+    "id": "real-W03",
+    "type": "which_document",
+    "question": "How much private AI investment did the United States attract in 2025?",
+    "expected": "$285.9 billion, 23.1 times the amount invested in China ($12.4 billion).",
+    "expected_docs": [
+      "ai_index_2026.pdf"
+    ],
+    "expected_page": 182,
+    "answer": "According to the **AI Index Report 2026** (ai_index_2026.pdf), the United States attracted **nearly $285.9 billion** in total private AI investment in 2025, making it the global leader \u2014 23.1 times greater than the amount invested in the next country (p.180). This figure is also confirmed on p.183, which states \"285.88\" billion for the United States in the \"Global private investment in AI by geographic area, 2013\u201325\" chart for 2025.\n\nNote: The excerpts from **ai_index_2025.pdf** report a different, earlier figure \u2014 $109.1 billion invested in the U.S. in **2024** (p.252 and p.17) \u2014 but this pertains to 2024, not 2025, and comes from the prior year's report.",
+    "hits": [
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 186,
+        "distance": 0.2678,
+        "chunk_id": 763
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 180,
+        "distance": 0.2787,
+        "chunk_id": 759
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 252,
+        "distance": 0.293,
+        "chunk_id": 476
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 183,
+        "distance": 0.2934,
+        "chunk_id": 761
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 17,
+        "distance": 0.3303,
+        "chunk_id": 314
+      }
+    ]
+  },
+  {
+    "id": "real-W04",
+    "type": "which_document",
+    "question": "How many AI incidents were reported to the AI Incident Database in 2025?",
+    "expected": "362 incidents, up from 233 in 2024.",
+    "expected_docs": [
+      "ai_index_2026.pdf"
+    ],
+    "expected_page": 128,
+    "answer": "According to **AI Index 2026** (p.131), **362 incidents** were reported to the AI Incident Database (AIID) in 2025. The excerpt notes that \"the annual number of incidents had stayed under 100 until 2022,\" reflecting a significant increase in recent years.\n\nIt's also worth noting a caveat provided in the same source: \"The number of AI incidents is continually updated, including for previous years. Therefore, the totals reported in Figure 3.2.1 might not align with the totals recently published on the AI Incident Database\" (AI Index 2026, p.131, footnote 2).",
+    "hits": [
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 131,
+        "distance": 0.3591,
+        "chunk_id": 726
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 141,
+        "distance": 0.3741,
+        "chunk_id": 734
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 140,
+        "distance": 0.3791,
+        "chunk_id": 733
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 182,
+        "distance": 0.4153,
+        "chunk_id": 423
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 179,
+        "distance": 0.4162,
+        "chunk_id": 422
+      }
+    ]
+  },
+  {
+    "id": "real-W05",
+    "type": "which_document",
+    "question": "How many notable AI models did United States institutions produce in 2024?",
+    "expected": "40 notable AI models, compared with China's 15 and Europe's combined total of three.",
+    "expected_docs": [
+      "ai_index_2025.pdf"
+    ],
+    "expected_page": 47,
+    "answer": "United States institutions produced **40 notable AI models in 2024** (AI Index 2025, p.13, and confirmed again on p.46: \"In 2024, the United States led with 40 notable AI models, followed by China with 15 and France with three\").",
+    "hits": [
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 13,
+        "distance": 0.3081,
+        "chunk_id": 311
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 48,
+        "distance": 0.3147,
+        "chunk_id": 333
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 46,
+        "distance": 0.3264,
+        "chunk_id": 331
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 15,
+        "distance": 0.3273,
+        "chunk_id": 636
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 11,
+        "distance": 0.3327,
+        "chunk_id": 634
+      }
+    ]
+  },
+  {
+    "id": "real-W06",
+    "type": "which_document",
+    "question": "What base model does the OctoTools paper use for all results unless otherwise specified?",
+    "expected": "gpt-4o-2024-08-06.",
+    "expected_docs": [
+      "2026.acl-long.1.pdf"
+    ],
+    "expected_page": 6,
+    "answer": "According to \"OctoTools\" (2026.acl-long.1, p.6): \"Unless otherwise specified, all results presented below use gpt-4o-2024-08-06 as the base model.\"",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 6,
+        "distance": 0.4406,
+        "chunk_id": 239
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 8,
+        "distance": 0.442,
+        "chunk_id": 244
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 5,
+        "distance": 0.4685,
+        "chunk_id": 238
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 408,
+        "distance": 0.564,
+        "chunk_id": 946
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 405,
+        "distance": 0.5674,
+        "chunk_id": 938
+      }
+    ]
+  },
+  {
+    "id": "real-R01",
+    "type": "refusal",
+    "question": "What is NVIDIA's revenue guidance for fiscal year 2027?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "The provided excerpts do not contain any revenue guidance for fiscal year 2027. The documents include historical revenue and segment data (e.g., FY2025 and FY2026 actual results in nvda_10k_fy2025.pdf and nvda_10k_fy2026.pdf), as well as stock performance comparisons, but no forward-looking guidance figures for fiscal year 2027 are present in the excerpts provided.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3569,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 39,
+        "distance": 0.3577,
+        "chunk_id": 1038
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 35,
+        "distance": 0.3631,
+        "chunk_id": 1187
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.3678,
+        "chunk_id": 1233
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 34,
+        "distance": 0.3679,
+        "chunk_id": 1032
+      }
+    ]
+  },
+  {
+    "id": "real-R02",
+    "type": "refusal",
+    "question": "What was Jen-Hsun Huang's total compensation in fiscal year 2026?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "The provided excerpts do not contain information about Jen-Hsun Huang's total compensation for fiscal year 2026. The documents include his biographical background, age, and title (President and CEO) as of February 20, 2026 (nvda_10k_fy2026.pdf, p.11), but no specific compensation figures are given in these excerpts.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 11,
+        "distance": 0.4216,
+        "chunk_id": 1150
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 12,
+        "distance": 0.4619,
+        "chunk_id": 996
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 37,
+        "distance": 0.4874,
+        "chunk_id": 1189
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 76,
+        "distance": 0.4885,
+        "chunk_id": 1232
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 77,
+        "distance": 0.4981,
+        "chunk_id": 1078
+      }
+    ]
+  },
+  {
+    "id": "real-R03",
+    "type": "refusal",
+    "question": "What percentage of NVIDIA's fiscal 2026 employees were based in the United States?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "Based on the provided excerpts, this information is not available. The documents contain data on NVIDIA's total employee count for fiscal year 2025 (approximately 36,000 employees in 38 countries, per **nvda_10k_fy2025.pdf, p.11**), but they do not break down employees by country/geographic location, nor do they provide any employee headcount figures for fiscal year 2026 at all. The fiscal 2026 excerpts focus on revenue, segment operating income, and geographic revenue/long-lived asset data rather than human capital metrics.\n\nIf you have access to the Human Capital Management section of the fy2026 10-K (which was not included in these excerpts), that would be needed to answer this question.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3505,
+        "chunk_id": 995
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.3507,
+        "chunk_id": 1233
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3514,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 78,
+        "distance": 0.356,
+        "chunk_id": 1234
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 11,
+        "distance": 0.3816,
+        "chunk_id": 994
+      }
+    ]
+  },
+  {
+    "id": "real-R04",
+    "type": "refusal",
+    "question": "What is projected United States data center electricity consumption in 2030, in TWh?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "The provided excerpts do not contain any information on projected United States data center electricity consumption for 2030. The documents discuss AI accelerator/data center power demand in megawatts (e.g., cumulative power demand of AI accelerator modules ~5,200 MW and all-in AI systems ~9,400 MW through 2024, per *ai_index_2026.pdf*, p.39; total AI data center power capacity of ~29.6 GW by Q4 2025, per *ai_index_2026.pdf*, p.30) and per-query/annual energy and water consumption figures for models like GPT-4o, but none of these excerpts provide a 2030 projection figure for U.S. data center electricity consumption in TWh.",
+    "hits": [
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 39,
+        "distance": 0.5049,
+        "chunk_id": 653
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 30,
+        "distance": 0.5323,
+        "chunk_id": 646
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 73,
+        "distance": 0.538,
+        "chunk_id": 351
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 37,
+        "distance": 0.5559,
+        "chunk_id": 652
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 72,
+        "distance": 0.5858,
+        "chunk_id": 350
+      }
+    ]
+  },
+  {
+    "id": "real-R05",
+    "type": "refusal",
+    "question": "How many mentions of AI were there in legislative proceedings in 2025?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "Based on the provided excerpts, I cannot answer this question plainly. The documents contain data on AI mentions in legislative proceedings only through 2024, not 2025.\n\nSpecifically:\n- The **AI Index Report 2025** (ai_index_2025.pdf, p.347) states that \"AI mentions rose by 21.3%, increasing from 1,557 in 2023 to 1,889\" in **2024**, with the total number of AI mentions having \"grown more than ninefold\" since 2016.\n- The **AI Index Report 2026** excerpts provided focus on different metrics for 2025, such as the number of AI-related bills passed into law in the US (150 in 2025) and the number of witnesses in US congressional AI-related hearings (102 in 2025) (ai_index_2026.pdf, p.343 and p.346). These excerpts do not report a global figure for AI *mentions* in legislative proceedings for 2025.\n\nNo excerpt provides a 2025 figure for AI mentions in legislative proceedings globally.",
+    "hits": [
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 347,
+        "distance": 0.2697,
+        "chunk_id": 533
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 345,
+        "distance": 0.3229,
+        "chunk_id": 532
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 343,
+        "distance": 0.3237,
+        "chunk_id": 876
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 346,
+        "distance": 0.3237,
+        "chunk_id": 878
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 348,
+        "distance": 0.3299,
+        "chunk_id": 534
+      }
+    ]
+  },
+  {
+    "id": "real-R06",
+    "type": "refusal",
+    "question": "What was the estimated dollar training cost of a frontier model released in 2025?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "Based on the provided excerpts, there is no dollar training cost figure given for any model released in 2025.\n\nThe excerpts from **ai_index_2025.pdf (p.65-66)** provide training cost estimates only through 2024 models, with the most recent being **Llama 3.1-405B at $170 million** and **Grok-2** (cost not explicitly stated in the text, though it appears in the chart alongside 2024 models). The most recent specific cost mentioned in the text is **DeepSeek-V3 at about $6 million** (ai_index_2025.pdf, p.65), though this model's release timing and cost accuracy are disputed\u2014footnote 27 notes \"some reports have disputed the stated cost of DeepSeek-V3, arguing that when factoring in employee salaries, capital expenditures, and research expenses, the actual development costs were significantly higher\" (ai_index_2025.pdf, p.66).\n\nThe **ai_index_2026.pdf** excerpts (p.35, p.190-191) reference 2025-era models such as **Grok 3, Grok 4, and DeepSeek v3**, but the data provided for these focuses on **carbon emissions and power draw**, not dollar training costs. No specific training cost in dollars is given for these 2025 models in the excerpts provided.\n\n**In summary:** The excerpts do not contain a dollar training cost estimate specifically for a model released in 2025. The most recent dollar figures available are from 2024 (Llama 3.1-405B at $170 million) or earlier disputed estimates for DeepSeek-V3 (~$6 million).",
+    "hits": [
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 66,
+        "distance": 0.4818,
+        "chunk_id": 346
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 65,
+        "distance": 0.522,
+        "chunk_id": 345
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 64,
+        "distance": 0.5524,
+        "chunk_id": 344
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 190,
+        "distance": 0.5604,
+        "chunk_id": 766
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 35,
+        "distance": 0.5897,
+        "chunk_id": 650
+      }
+    ]
+  },
+  {
+    "id": "real-R07",
+    "type": "refusal",
+    "question": "How many tokens per query does OctoTools consume with the Gemini-2.5-Pro backbone?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "Based on the provided excerpts, this information is not available. Table 6 in \"OctoTools\" (2026.acl-long.1, p.18), which reports per-query resource usage across different LLM backbones, lists cost, average steps, and time (seconds) for Gemini-2.5-Pro (cost: 0.15, avg. steps: 3.67, time: 216.2s), but the \"Tokens\" column for Gemini-2.5-Pro is marked with a dash (\"-\"), indicating that token consumption data is not reported for this backbone in the excerpt.",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 18,
+        "distance": 0.4059,
+        "chunk_id": 260
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 8,
+        "distance": 0.4854,
+        "chunk_id": 244
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 9,
+        "distance": 0.4916,
+        "chunk_id": 245
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 37,
+        "distance": 0.5501,
+        "chunk_id": 652
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 37,
+        "distance": 0.5743,
+        "chunk_id": 651
+      }
+    ]
+  },
+  {
+    "id": "real-R08",
+    "type": "refusal",
+    "question": "What learning rate and batch size did the RAG authors use for fine-tuning?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "Based on the provided excerpts, I cannot find information about the specific learning rate or batch size used for fine-tuning RAG models.\n\nThe excerpts from \"rag_lewis\" (rag_lewis.pdf) include discussions of training setup details (p.16), such as the use of Fairseq, mixed precision training, distribution across 8 32GB NVIDIA V100 GPUs, and FAISS-based document indexing\u2014but no mention of learning rate or batch size values. Other excerpts cover implementation details (p.16), parameter counts (p.18), open-domain QA preprocessing (p.4, p.18), and unrelated benchmark information from the AI Index 2025 report (p.113, p.115), none of which address this question.\n\nIf this information exists elsewhere in the source document, it is not contained within the excerpts provided here.",
+    "hits": [
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 18,
+        "distance": 0.5396,
+        "chunk_id": 1269
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 4,
+        "distance": 0.5452,
+        "chunk_id": 1250
+      },
+      {
+        "doc": "rag_lewis.pdf",
+        "page": 16,
+        "distance": 0.5453,
+        "chunk_id": 1268
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 113,
+        "distance": 0.6004,
+        "chunk_id": 378
+      },
+      {
+        "doc": "ai_index_2025.pdf",
+        "page": 115,
+        "distance": 0.6352,
+        "chunk_id": 379
+      }
+    ]
+  },
+  {
+    "id": "real-R09",
+    "type": "refusal",
+    "question": "How much accuracy does OctoTools lose when the context verifier is removed?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "The provided excerpts do not contain any information about a \"context verifier\" component in OctoTools or the accuracy loss from removing it. The excerpts discuss OctoTools' toolset optimization ablations (base tool vs. full toolset vs. optimized toolset), maximum step limits, performance across different backbone LLMs, robustness to injected tool failures, and failure mode analysis (2026.acl-long.1, pp.7, 9), but none mention a \"context verifier\" ablation specifically.",
+    "hits": [
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.4715,
+        "chunk_id": 243
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 9,
+        "distance": 0.485,
+        "chunk_id": 245
+      },
+      {
+        "doc": "2026.acl-long.1.pdf",
+        "page": 7,
+        "distance": 0.4904,
+        "chunk_id": 241
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 96,
+        "distance": 0.6012,
+        "chunk_id": 699
+      },
+      {
+        "doc": "ai_index_2026.pdf",
+        "page": 137,
+        "distance": 0.6117,
+        "chunk_id": 731
+      }
+    ]
+  },
+  {
+    "id": "real-R10",
+    "type": "refusal",
+    "question": "What was NVIDIA's Data Center revenue in the fourth quarter of fiscal year 2026?",
+    "expected": null,
+    "expected_docs": null,
+    "expected_page": null,
+    "answer": "The provided excerpts do not contain quarterly (Q4 FY2026) Data Center revenue figures. They only include **full fiscal year** Data Center revenue data:\n\n- Fiscal Year 2026: $193,737 million (nvda_10k_fy2026.pdf, p.78)\n- Fiscal Year 2025: $115,186 million (nvda_10k_fy2026.pdf, p.78; nvda_10k_fy2025.pdf, p.79)\n- Fiscal Year 2024: $47,525 million (nvda_10k_fy2026.pdf, p.78; nvda_10k_fy2025.pdf, p.79)\n\nNo breakdown by quarter is present in these excerpts, so the specific Q4 FY2026 Data Center revenue figure cannot be answered from the provided documents.",
+    "hits": [
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 78,
+        "distance": 0.2831,
+        "chunk_id": 1234
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 40,
+        "distance": 0.3138,
+        "chunk_id": 1193
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 79,
+        "distance": 0.3141,
+        "chunk_id": 1081
+      },
+      {
+        "doc": "nvda_10k_fy2025.pdf",
+        "page": 78,
+        "distance": 0.3184,
+        "chunk_id": 1080
+      },
+      {
+        "doc": "nvda_10k_fy2026.pdf",
+        "page": 77,
+        "distance": 0.3207,
+        "chunk_id": 1233
+      }
+    ]
+  }
+]
