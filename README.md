@@ -35,6 +35,8 @@ OpenAI `text-embedding-3-small` (1536d)
 | 2 | Multi-document retrieval, idempotent ingestion, attribution | Done |
 | 3 | Hybrid search, reranking, contextual retrieval | In-progress |
 | 4 | Grounding and reliable refusal (retrieval floor, citations, span verification) | Planned |
+| 5 |  | TBD |
+
 
 ## Golden Set Evaluation
 Golden set contains 4 different question types
@@ -43,7 +45,80 @@ Golden set contains 4 different question types
 - **refusal**: Questions that currently can _not_ be answered from sources in the corpora, and should be refused.
 - **expected_fail**: Questions that the RAG system is currently unable to answer due to current limited parsing capabilities; Currently excluded in evaluations.
 
-## Phase 1 Baseline
+## Phase 2
+
+### Legend
+**attribution**:
+- @1 represents the top hit containing the correct document
+- @k represents the top k hits containing the correct document
+- Only evaluated on answerable questions
+  
+**which_document**: 
+- top hit contains the correct document for which_document questions
+
+**factual**:
+- correct - questions were answered correctly
+- partial - questions were answered partly, but stated that the remainder was not in the excerpts
+- wrong refusal - questions that are answerable but were refused
+
+**prose-sourced**: 
+- golden-set answers appear in running text.
+
+**table/chart sourced**: 
+- golden-set answers appear in tables/charts.
+
+
+### 
+  **Mechanical Evaluation**
+| Metric                          | Result    |
+| ------------------------------- | --------- |
+| attribution@1 (answerable)      | **19/23** |
+| attribution@k (answerable)      | **23/23** |
+| which_document: correct top hit | **6/6**   |
+| expected_page in hits           | **8/23**  |
+| factual: correct                | **11/17** |
+| factual: partial                | **4/17**  |
+| factual: wrongly refused        | **2/17**  |
+| correct refusals                | **10/10** |
+
+**Source Type Evaluation**
+|                              | attribution@1 | expected_page | answered correctly |
+| -----------------------------| ------------- | ------------- | ------------------ |
+|**prose-sourced (13)**        |    11/13      |     7/13      |       9/13         |
+| **table/chart-sourced (10)** |    8/10       |     1/10      |       8/10         |
+
+**Top-1 distance distribution**
+|                | min   | median | max   |
+| -------------- | ----- | ------ | ----- |
+| **answerable** | 0.219 | 0.331  | 0.486 |
+| **refusal**    | 0.270 | 0.414  | 0.540 |
+
+
+### Diagnosis:
+- expected_page in hits is an unreliable metric. Page records where a chunk starts, so any fact in the back half of a chunk is filed under the previous page.
+- attribution@k is perfect and attribution@1 is 83%; Retrieval is able to find the right documents.
+- attribution@1 misses are all within an overlapping pair of documents. Lexically near-identical documents are harder to distinguish.
+- expected_pages drops heavily for tables/charts/figures. Given the metric's unreliability, gap is not evidence that parsing is blocking answers.
+- There are zero fabricated answers across the 23 answerable questions. There was one hallucination that inferred a relationship between two real figures, which would pass with span verification.
+- There is no document bias. NVDA FY2026 contributed 36 retrieved chunks against NVDA FY2025's 34. Ranked first six times against eight, respectively.
+- For all hit sets, there were one distinct document 10 times and two distinct documents 23 times, never more. Retrieval was able to find the relevant document(s) for this corpus.
+- PER_DOC_CAP = 3 caused false refusals by neglecting depth in single documents. Increasing the cap to 5 and TOP_K = 5 turned off the cap, fixing the problem for a corpus of 6 documents due to the lower diversity. Likely need to lower the cap when more documents are added to the corpus.
+- Top 1 distance distributions for answerable and refusal questions overlap badly. At this stage, a retrieval-floor threshold won't work.
+- Corpus has lots of boilerplate. About 56% - 96% of chunks in every long document, which caused chunk dilution.
+- Correct refusals stayed at 10/10, and did not drop as predicted after multi-document ingestion was introduced.
+- At least one two-column page was extracted interleaved, so chunks contain broken sentences interleaved with an unrelated one. 
+
+#### Question Diagnosis
+- F03: FY2024 graphics revenue also appears in FY2026 p.77. Golden set was updated to include the document.
+- F04: Correct chunk was not in hit set, but recovered at k=10. Chunk sat below both copies of the wrong year's rankings.
+- F08: Fact was buried in a generally unrelated chunk, and chunk was never retrieved at any k.
+- F16: Answered correctly from a chunk spanning pages 160-161; scored as an expected_page miss because page records the chunk's start.
+- R06: Correctly declined to give a 2025 frontier-model training cost, but then offered the 2024 Llama figure with the year clearly stated. Graded as correct refusal.
+- W02: Gave the right answer, and then made an incorrect relationship between two figures from different years in the same document.
+- F05, F06, F07, F14: Partials; Each answered the retrieved part and explicitly stated the rest wasn't in the excerpts.
+
+## Phase 1
+### Baseline
 ```
 2026-08-20, git 145eecd
 - config: text-embedding-3-small/1536, 800-token chunks, 100 overlap, dense top-5, no rerank
@@ -51,7 +126,7 @@ Golden set contains 4 different question types
 - factual (3):   2/3 correct
 - refusal (10):  10/10 correctly refused
 ```
-#### Diagnosis: 
+### Diagnosis: 
 - The missed factual question was a precision problem; Correct chunks were retrieved, but all answers were ranked outside the top 5 window.
 - All cosine distances were relatively high, with every answer greater than 0.40.
 - The spread of the top 5 hits across all three factual questions were 0.42-0.55.
@@ -60,7 +135,7 @@ Golden set contains 4 different question types
 - Refusal score is not yet a meaningful number. Expected to drop once given more documents.
 
 
-#### Factual Results
+### Factual Results
 ```
 F09: FAIL at k=5. Answer chunks rank 6, 8, 12, 15 of 25.
 Top-5 distances 0.42-0.49, no separation — chunk dilution at 800 tokens.
